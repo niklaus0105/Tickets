@@ -71,33 +71,7 @@ public class TicketMasterAPI {
 		return new ArrayList<Item>();
 	}
 	
-	/**
-	 * Helper methods
-	 */
-
-	//  {
-	//    "name": "laioffer",
-    //    "id": "12345",
-    //    "url": "www.laioffer.com",
-	//    ...
-	//    "_embedded": {
-	//	    "venues": [
-	//	        {
-	//		        "address": {
-	//		           "line1": "101 First St,",
-	//		           "line2": "Suite 101",
-	//		           "line3": "...",
-	//		        },
-	//		        "city": {
-	//		        	"name": "San Francisco"
-	//		        }
-	//		        ...
-	//	        },
-	//	        ...
-	//	    ]
-	//    }
-	//    ...
-	//  }
+	
 	private String getAddress(JSONObject event) throws JSONException {
 		if (!event.isNull("_embedded")) {
 			JSONObject embedded = event.getJSONObject("_embedded");
